@@ -6,7 +6,7 @@
 
 
 MCU = attiny85
-F_CPU = 8000000
+F_CPU = 16000000
 FORMAT = ihex
 TARGET = main
 SRC = $(TARGET).c

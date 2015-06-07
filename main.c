@@ -1,6 +1,7 @@
 //#include <avr/io.h>
 //#include <avr/interrupt.h>
 #include <avr/sleep.h>
+#include <avr/power.h>
 #include <util/delay.h>
 #include <util/twi.h>
 
@@ -21,6 +22,8 @@ void work(void) {
 };
 
 void init(void) {
+    // prescaler for 16 mhz, if not present 8 mhz
+    clock_prescale_set(clock_div_1); 
 //  cli();
 //  GIMSK |= 1 << PCIE;
 //  PCMSK |= 1 << PCINT0;
